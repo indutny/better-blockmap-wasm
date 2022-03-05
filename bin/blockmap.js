@@ -44,7 +44,10 @@ async function main() {
     await writeFile(argv.output, output);
   } else {
     const f = await open(argv.input, 'a');
+    const size = Buffer.alloc(4);
+    size.writeUint32LE(output.length);
     await f.write(output);
+    await f.write(size);
     await f.close();
   }
   console.log(JSON.stringify(blockMap.stats));
