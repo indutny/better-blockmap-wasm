@@ -1,6 +1,6 @@
 {
   "name": "better-blockmap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate better blockmap files for electron-builder",
   "main": "index.js",
   "bin": "bin/blockmap.js",
