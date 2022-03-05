@@ -1,0 +1,45 @@
+{
+  "name": "better-blockmap",
+  "version": "1.0.0",
+  "description": "Generate better blockmap files for electron-builder",
+  "main": "index.js",
+  "bin": "bin/blockmap.js",
+  "files": [
+    "index.js",
+    "bin",
+    "pkg/*",
+    "!pkg/.gitignore",
+    "!pkg/LICENSE-MIT",
+    "!pkg/README.md",
+    "!pkg/*.d.ts"
+  ],
+  "scripts": {
+    "prepublish": "wasm-pack build --target=nodejs --release",
+    "lint": "eslint *.js bin/*.js test/*.js",
+    "test": "ava && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/indutny/better-blockmap-wasm.git"
+  },
+  "keywords": [
+    "better",
+    "blockmap",
+    "wasm",
+    "rabin",
+    "fingerprint"
+  ],
+  "author": "Fedor Indutny <fedor@indutny.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indutny/better-blockmap-wasm/issues"
+  },
+  "homepage": "https://github.com/indutny/better-blockmap-wasm#readme",
+  "devDependencies": {
+    "ava": "^4.0.1",
+    "eslint": "^8.10.0"
+  },
+  "dependencies": {
+    "yargs": "^17.3.1"
+  }
+}
