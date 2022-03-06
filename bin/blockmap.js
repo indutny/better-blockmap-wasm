@@ -45,7 +45,7 @@ async function main() {
   } else {
     const f = await open(argv.input, 'a');
     const size = Buffer.alloc(4);
-    size.writeUint32LE(output.length);
+    size.writeUint32BE(output.length);
     await f.write(output);
     await f.write(size);
     await f.close();

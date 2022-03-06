@@ -16,7 +16,8 @@
   "scripts": {
     "prepublish": "wasm-pack build --target=nodejs --release",
     "lint": "eslint *.js bin/*.js test/*.js",
-    "test": "ava && npm run lint"
+    "ava": "ava",
+    "test": "npm run ava && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
   },
   "homepage": "https://github.com/indutny/better-blockmap-wasm#readme",
   "devDependencies": {
+    "app-builder-bin": "^4.1.1",
     "ava": "^4.0.1",
     "eslint": "^8.10.0"
   },
