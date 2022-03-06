@@ -27,7 +27,6 @@ Options:
 ## Building
 
 ```sh
-cargo install wasm-pack
 npm install
 npm run prepublish
 ```

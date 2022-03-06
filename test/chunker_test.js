@@ -1,8 +1,11 @@
 const crypto = require('crypto');
-const { pipeline } = require('stream/promises');
+let { pipeline }  = require('stream');
+const { promisify } = require('util');
 const test = require('ava');
 
 const { BlockMap } = require('../');
+
+pipeline = promisify(pipeline);
 
 test('it generates blockmap from a small string', async (t) => {
   const b = new BlockMap();

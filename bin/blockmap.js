@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 const { createReadStream } = require('fs');
 const { open, writeFile } = require('fs/promises');
-const { pipeline }  = require('stream/promises');
+let { pipeline }  = require('stream');
+const { promisify } = require('util');
 const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
 const { BlockMap } = require('../');
+
+pipeline = promisify(pipeline);
 
 const argv = yargs(hideBin(process.argv))
   .option('i', {

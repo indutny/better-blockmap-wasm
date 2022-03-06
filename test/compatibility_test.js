@@ -5,11 +5,12 @@ const zlib = require('zlib');
 const { createWriteStream } = require('fs');
 const { mkdtemp, copyFile, rm, readFile } = require('fs/promises');
 let { execFile } = require('child_process');
-const { pipeline } = require('stream/promises');
+let { pipeline }  = require('stream');
 const { promisify } = require('util');
 const test = require('ava');
 
 execFile = promisify(execFile);
+pipeline = promisify(pipeline);
 
 const ourBinary = path.join(__dirname, '..', 'bin', 'blockmap.js');
 const { appBuilderPath } = require('app-builder-bin');
