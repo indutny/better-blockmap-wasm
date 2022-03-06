@@ -16,7 +16,7 @@ const ourBinary = path.join(__dirname, '..', 'bin', 'blockmap.js');
 const { appBuilderPath } = require('app-builder-bin');
 
 test.beforeEach(async (t) => {
-  const tmpDir = await mkdtemp(os.tmpdir());
+  const tmpDir = await mkdtemp(path.join(os.tmpdir(), 'better-blockmap-'));
   const input = path.join(tmpDir, 'app.bin');
 
   const us = path.join(tmpDir, 'app.bin.us');
