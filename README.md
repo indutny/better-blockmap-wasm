@@ -1,4 +1,5 @@
 # better-blockmap-wasm
+![actions](https://github.com/indutny/better-blockmap-wasm/actions/workflows/ci/badge.svg)
 
 Wasm bindings for [better-blockmap][0].
 
