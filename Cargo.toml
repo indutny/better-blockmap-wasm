@@ -2,7 +2,7 @@
 name = "better-blockmap-wasm"
 description = "Wasm wrapper around better-blockmap"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 authors = ["Fedor Indutny <fedor@indutny.com>"]
 repository = "https://github.com/indutny/better-blockmap-wasm"
 license = "MIT"
@@ -14,7 +14,7 @@ readme = "README.md"
 crate-type = ["cdylib"]
 
 [dependencies]
-better-blockmap = "^2.0.0"
+better-blockmap = "^3.0.0"
 base64 = "0.13.0"
 wasm-bindgen = "0.2.63"
 

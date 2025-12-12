@@ -1,6 +1,6 @@
 {
   "name": "better-blockmap",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Generate better blockmap files for electron-builder",
   "main": "index.js",
   "bin": "bin/blockmap.js",
@@ -40,7 +40,7 @@
     "app-builder-bin": "^4.1.1",
     "ava": "^4.0.1",
     "eslint": "^8.10.0",
-    "wasm-pack": "^0.10.2"
+    "wasm-pack": "^0.13.1"
   },
   "dependencies": {
     "yargs": "^17.3.1"
